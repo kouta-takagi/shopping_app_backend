@@ -1,24 +1,22 @@
-# README
+# 概要
+ユーザーが商品をカートに追加し、合計金額を確認できるシンプルなカート機能のアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## テーブル設計
+### Productsテーブル
+- **名前 (name)**: 文字列
+- **価格 (price)**: decimal
+### CartItemsテーブル
+- **商品 (product_id)**: 外部キー
+- **数量 (quantity)**: 整数（デフォルトは1）
 
-Things you may want to cover:
+## 機能
+- **商品一覧ページ**:  
+  商品をリスト表示し、カートに追加するボタンを実装。商品をカートに入れるときに数量を入力できる。すでにある商品が追加されたら数量が増える。
+- **カートページ**:  
+  カートに追加された商品と合計金額を表示。商品は複数回追加できる。数量を変更できる。
+- **カート内の商品の削除機能**:  
+  カートから商品を削除できる。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用技術
+- **フロントエンド**: Next.js15.0.1
+- **バックエンド**: Ruby3.3.4, Rails7.2.1
